@@ -3,11 +3,23 @@ class Calc
 {
 	int num1;
 	int num2;
-	int result;
 
-	public void perform()
+	public Calc()
 	{
-		result = num1 + num2;
+		num1 = 4;
+		num2 = 5;
+	}
+
+	public Calc(int n)
+	{
+		num1 = n;
+		num2 = n;
+	}
+
+	public Calc(double d, int n)
+	{
+		num1 = (int) d;
+		num2  = n;
 	}
 }
 
@@ -15,10 +27,7 @@ class Calc
 	{
 		public static void main(String[] args)
 		{
-			Calc obj = new Calc();
-			obj.num1 = 4;
-			obj.num2 = 6;
-			obj.perform();
-			System.out.println(obj.result);
+			Calc obj = new Calc(100);
+			System.out.println(obj.num2);
 		}
 	}
