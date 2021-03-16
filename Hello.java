@@ -1,25 +1,19 @@
 
-class Calc
+class Casio
 {
-	int num1;
-	int num2;
-
-	public Calc()
+	public void add(int i,int j)
 	{
-		num1 = 4;
-		num2 = 5;
+		System.out.println(i+j);
 	}
 
-	public Calc(int n)
+	public void add(int i, int j, int k)
 	{
-		num1 = n;
-		num2 = n;
+		System.out.println(i+j+k);
 	}
 
-	public Calc(double d, int n)
+	public void add(double i, double j)
 	{
-		num1 = (int) d;
-		num2  = n;
+		System.out.println(i+j);
 	}
 }
 
@@ -27,7 +21,9 @@ class Calc
 	{
 		public static void main(String[] args)
 		{
-			Calc obj = new Calc(100);
-			System.out.println(obj.num2);
+			Casio obj = new Casio();
+			obj.add(2,4);
+			obj.add(5,95,142);
+			obj.add(2.134,1.534);
 		}
 	}
