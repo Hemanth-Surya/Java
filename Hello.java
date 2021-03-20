@@ -1,29 +1,42 @@
-
-class Casio
+import java.util.Scanner;
+public class Hello
 {
-	public void add(int i,int j)
+	public static void main(String[] args)
 	{
-		System.out.println(i+j);
-	}
+		double num1,num2,result;
+		char op;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the op you want: +, -, *, /");
+		op = sc.next().charAt(0);
+		System.out.println("enter num1");
+		num1 = sc.nextDouble();
+		System.out.println("enter num2");
+		num2 = sc.nextDouble();
 
-	public void add(int i, int j, int k)
-	{
-		System.out.println(i+j+k);
-	}
-
-	public void add(double i, double j)
-	{
-		System.out.println(i+j);
-	}
-}
-
-	public class Hello
-	{
-		public static void main(String[] args)
+		switch(op)
 		{
-			Casio obj = new Casio();
-			obj.add(2,4);
-			obj.add(5,95,142);
-			obj.add(2.134,1.534);
+			case '+':
+			result = num1 + num2;
+			System.out.println(num1 + "+" + num2 + "=" + result);
+			break;
+
+			case '-':
+			result = num1 - num2;
+			System.out.println(num1 + "-" + num2 +  "=" + result);
+			break;
+
+			case '*':
+			result = num1 * num2;
+			System.out.println(num1 + "*" + num2 + "=" + result);
+			break;
+
+			case '/':
+			result = num1 / num2;
+			System.out.println(num1 + "/" + num2 + "=" + result);
+			break;
+
+			default:
+			System.out.println("invalid");
 		}
 	}
+}
