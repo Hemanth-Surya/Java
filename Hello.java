@@ -3,11 +3,11 @@ public class Hello
 {
 	public static void main(String[] args)
 	{
-		double num1,num2,result;
 		char op;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("enter the op you want: +, -, *, /");
+		System.out.println("enter the op you want : +, -, *, /");
 		op = sc.next().charAt(0);
+		double num1,num2,result;
 		System.out.println("enter num1");
 		num1 = sc.nextDouble();
 		System.out.println("enter num2");
@@ -22,7 +22,7 @@ public class Hello
 
 			case '-':
 			result = num1 - num2;
-			System.out.println(num1 + "-" + num2 +  "=" + result);
+			System.out.println(num1 + "-" + num2 + "=" + result);
 			break;
 
 			case '*':
@@ -36,7 +36,7 @@ public class Hello
 			break;
 
 			default:
-			System.out.println("invalid");
+			System.out.println("invalid"); 
 		}
 	}
 }
